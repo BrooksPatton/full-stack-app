@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Add a game!
+
+  form(action='/games', method='post')
+    div
+      label(for='title') Title of the game
+    div
+      input#title(type='text', name='title', placeholder='what is the game title')
+    div
+      label(for='platform') Where do you play the game?
+    div
+      input#title(type='text', name='platform', placeholder='What platform is the game on?')
+    div
+      label(for='rating') What do you rate this game as? 0 for unplayed.
+    div
+      input#title(type='number', name='rating', value=0, min=0, max=5)
+    div
+      button add the game
+
