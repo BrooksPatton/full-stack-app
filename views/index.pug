@@ -3,3 +3,10 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  div
+    ul
+      each val in games
+        li #{val.title} - #{val.platform} 
+        form(action='/games/' + val._id + '/delete', method='post')
+          button X
